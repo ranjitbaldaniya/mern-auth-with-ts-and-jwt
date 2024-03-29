@@ -4,6 +4,7 @@ import "dotenv/config";
 import { mongoose } from "mongoose";
 import cors from "cors";
 import { userRouter } from "./routes/userRoute.js";
+import { productRoutes } from "./routes/productRoute.js";
 
 const app = express();
 
@@ -31,6 +32,7 @@ db.on("error", (err) => {
 
 app.use(authRouter);
 app.use(userRouter);
+app.use(productRoutes)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
