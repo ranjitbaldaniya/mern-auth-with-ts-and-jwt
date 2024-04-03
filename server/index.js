@@ -5,6 +5,7 @@ import { mongoose } from "mongoose";
 import cors from "cors";
 import { userRouter } from "./routes/userRoute.js";
 import { productRoutes } from "./routes/productRoute.js";
+import { cartRoute } from "./routes/cartRoute.js";
 
 const app = express();
 
@@ -33,6 +34,7 @@ db.on("error", (err) => {
 app.use(authRouter);
 app.use(userRouter);
 app.use(productRoutes)
+app.use(cartRoute)
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
