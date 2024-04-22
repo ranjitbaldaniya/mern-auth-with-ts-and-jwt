@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className='mt-20 text-center font-bold'>ContactUs</div>
+    <h2 className="text-center font-bold text-sky-500">Contact US</h2>
   )
 }
 
